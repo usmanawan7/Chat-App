@@ -1,0 +1,20 @@
+
+<div class="card msg-<%= message.user.id %> mt-2">
+  <div class="card-header d-flex justify-content-between p-3">
+    <% unless message.room.is_private %>
+      <p class="fw-bold mb-0"> <%= message.user.email %> </p>
+    <% end %>
+    <p class="text-black small mb-0"><i class="far fa-clock"></i> <%=message.created_at.strftime("%H:%M") %></p>
+  </div>
+  <div class="card-body">
+    <p class="mb-0">
+      <%= message.content %>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+

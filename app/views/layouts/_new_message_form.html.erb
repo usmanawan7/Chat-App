@@ -1,0 +1,9 @@
+<li class="bg-white mb-3 mt-3">
+  <%= form_with(model: [@single_room ,@message], remote: true,
+     data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }) do |f| %>
+      <div data-mdb-input-init class="form-outline">
+      <%= f.text_field :content, id: 'chat-text', class: "form-control bg-body-tertiary", autocomplete: 'off', rows: 4 %>
+       <%= f.submit  data: { disable_with: false }, class: "btn fa-lg gradient-custom-2 mb-3 ml-1 mt-3"%>
+      </div>
+  <% end %>
+</li>
